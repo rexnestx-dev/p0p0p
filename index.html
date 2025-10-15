@@ -11,12 +11,17 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <h2>Klinik Sehat</h2>
-                <span>Kesehatan & Kecantikan</span>
+                <!-- GANTI DENGAN LOGO ANDA -->
+                <a href="#home">
+                    <img src="image/image_logo.png" 
+                         alt="Klinik Sehat - Kesehatan & Kecantikan Profesional"
+                        class="logo-image">
+                 </a>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Layanan</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
                 <li><a href="#footer">Kontak</a></li>
                 <li><a href="#admin" class="admin-btn" onclick="showAdminLogin()">Admin</a></li>
             </ul>
@@ -29,244 +34,85 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Praktik Perawatan Profesional</h1>
-                <p>Layanan perawatan terbaik untuk kesehatan dan kecantikan Anda dengan tenaga medis berpengalaman</p>
-                <div class="hero-buttons">
-                    <button class="cta-button" onclick="scrollToServices()">Lihat Layanan</button>
-                    <button class="cta-button secondary" onclick="showBookingModal()">Booking Sekarang</button>
-                </div>
-            </div>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Praktik Perawatan Professional</h1>
+            <p class="hero-description">
+                Layanan perawatan terbaik untuk kesehatan dan kecantikan Anda dengan tenaga medis berpengalaman
+            </p>
+            <button class="cta-button">Lihat Layanan</button>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section class="services" id="services">
         <div class="container">
-            <h2>Layanan Kami</h2>
-            <p class="section-subtitle">Berbagai jenis perawatan profesional untuk kesehatan dan kecantikan Anda</p>
-            
+            <h2 class="section-title">Layanan Kami</h2>
             <div class="services-grid">
-                <!-- Perawatan 1 -->
-                <div class="service-card" onclick="showServiceDetail('perawatan1')">
-                    <h3>Luka</h3>
-                    <div class="service-price">
-                        <span class="price">Rp 150.000 - 500.000</span>
-                        <span class="duration">90-120 menit</span>
-                    </div>
-                    <button class="service-btn">Detail Layanan</button>
+                <div class="service-card">
+                    <h3>Konsultasi Dokter</h3>
+                    <p>Konsultasi dengan dokter spesialis untuk masalah kesehatan Anda</p>
                 </div>
-
-                <!-- Perawatan 2 -->
-                <div class="service-card" onclick="showServiceDetail('perawatan2')">
-                    <h3>Kecantikan</h3>
-                    <div class="service-price">
-                        <span class="price">Rp 100.000 - 250.000</span>
-                        <span class="duration">60-75 menit</span>
-                    </div>
-                    <button class="service-btn">Detail Layanan</button>
+                <div class="service-card">
+                    <h3>Perawatan Kecantikan</h3>
+                    <p>Treatment kecantikan dengan teknologi terkini dan aman</p>
                 </div>
-
-                <!-- Perawatan 3 -->
-                <div class="service-card" onclick="showServiceDetail('perawatan3')">
-                    <h3>Sunat</h3>
-                    <div class="service-price">
-                        <span class="price">Rp 200.000 - 750.000</span>
-                        <span class="duration">120-150 menit</span>
-                    </div>
-                    <button class="service-btn">Detail Layanan</button>
-                </div>
-
-                <!-- Perawatan 4 -->
-                <div class="service-card" onclick="showServiceDetail('perawatan4')">
-                    <h3>Hipnoterapi</h3>
-                    <div class="service-price">
-                        <span class="price">Rp 300.000 - 800.000</span>
-                        <span class="duration">60-90 menit</span>
-                    </div>
-                    <button class="service-btn">Detail Layanan</button>
+                <div class="service-card">
+                    <h3>Skin Care</h3>
+                    <p>Perawatan kulit profesional untuk kulit sehat dan bersinar</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <h2>Galeri Klinik</h2>
-            <p class="section-subtitle">Lihat suasana dan fasilitas klinik kami</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openGallery('image1')">
-                    <div class="gallery-image">🏥</div>
-                    <p>Ruang Tunggu</p>
-                </div>
-                <div class="gallery-item" onclick="openGallery('image2')">
-                    <div class="gallery-image">💆</div>
-                    <p>Ruang Perawatan</p>
-                </div>
-                <div class="gallery-item" onclick="openGallery('image3')">
-                    <div class="gallery-image">✨</div>
-                    <p>Fasilitas Steril</p>
-                </div>
-                <div class="gallery-item" onclick="openGallery('image4')">
-                    <div class="gallery-image">👨‍⚕️</div>
-                    <p>Tim Medis</p>
-                </div>
+            <h2 class="section-title">Tentang Klinik Sehat</h2>
+            <div class="about-content">
+                <p>
+                    Klinik Sehat merupakan pusat layanan kesehatan dan kecantikan terpercaya 
+                    dengan tim medis profesional yang berpengalaman di bidangnya.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Klinik Sehat</h3>
-                    <p>Layanan perawatan kesehatan dan kecantikan profesional dengan standar tinggi untuk kenyamanan dan kepuasan Anda.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Media Sosial</h4>
-                    <div class="social-links">
-                        <a href="#" title="Facebook">📘 Facebook</a>
-                        <a href="#" title="Instagram">📷 Instagram</a>
-                        <a href="#" title="Twitter">🐦 Twitter</a>
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="images/logo-klinik-sehat.png" 
+                             alt="Klinik Sehat"
+                             class="logo-image">
                     </div>
+                    <p>Kesehatan & Kecantikan Profesional</p>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Kontak</h4>
-                    <p>📞 0812-3456-7890</p>
+                <div class="footer-contact">
+                    <h3>Kontak Kami</h3>
+                    <p>📞 (021) 1234-5678</p>
                     <p>📧 info@kliniksehat.com</p>
                     <p>📍 Jl. Kesehatan No. 123, Jakarta</p>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 Klinik Sehat. All rights reserved.</p>
+                <p>&copy; 2025 Klinik Sehat. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- MODALS -->
-    <!-- Service Details Modal -->
-    <div id="serviceModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="modalManager.closeAll()">&times;</span>
-            <div id="serviceModalContent">
-                <!-- Content will be loaded here -->
-            </div>
-        </div>
-    </div>
-
     <!-- Admin Login Modal -->
-    <div id="adminLoginModal" class="modal">
+    <div id="adminModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeAdminLogin()">&times;</span>
+            <span class="close">&times;</span>
             <h2>Login Admin</h2>
-            <form id="adminLoginForm">
-                <div class="form-group">
-                    <label for="adminUsername">Username</label>
-                    <input type="text" id="adminUsername" name="adminUsername" required>
-                </div>
-                <div class="form-group">
-                    <label for="adminPassword">Password</label>
-                    <input type="password" id="adminPassword" name="adminPassword" required>
-                </div>
-                <button type="submit" class="submit-btn">Login</button>
+            <form class="admin-form">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
             </form>
-        </div>
-    </div>
-
-    <!-- Admin Dashboard Modal -->
-    <div id="adminDashboard" class="modal admin-modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeAdminDashboard()">&times;</span>
-            <h2>Dashboard Admin</h2>
-            <div class="admin-tabs">
-                <button class="tab-btn active" onclick="openAdminTab('bookings')">Bookings</button>
-                <button class="tab-btn" onclick="openAdminTab('patients')">Patients</button>
-                <button class="tab-btn" onclick="openAdminTab('reports')">Reports</button>
-            </div>
-            
-            <div id="bookingsTab" class="tab-content active">
-                <h3>Appointment Bookings</h3>
-                <div class="admin-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Nama</th>
-                                <th>Layanan</th>
-                                <th>Tanggal</th>
-                                <th>Waktu</th>
-                                <th>Status</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="bookingsTable">
-                            <!-- Bookings will be loaded here -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <div id="patientsTab" class="tab-content">
-                <h3>Data Pasien</h3>
-                <p>Fitur dalam pengembangan...</p>
-            </div>
-            
-            <div id="reportsTab" class="tab-content">
-                <h3>Laporan</h3>
-                <p>Fitur dalam pengembangan...</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Cart Modal -->
-    <div id="cartModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeCart()">&times;</span>
-            <h2>Keranjang Belanja</h2>
-            <div id="cartItems">
-                <!-- Cart items will be loaded here -->
-            </div>
-            <div class="cart-total">
-                <strong>Total: Rp <span id="cartTotal">0</span></strong>
-            </div>
-            <div class="cart-actions">
-                <button class="cta-button secondary" onclick="closeCart()">Lanjut Belanja</button>
-                <button class="cta-button" onclick="checkout()">Checkout</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Notification -->
-    <div id="notification" class="notification">
-        <span id="notificationText"></span>
-    </div>
-
-    <!-- Live Chat Widget -->
-    <div class="chat-widget">
-        <button class="chat-toggle" onclick="toggleChat()">
-            💬
-        </button>
-        <div class="chat-box">
-            <div class="chat-header">
-                <h4>Butuh Bantuan?</h4>
-                <button class="chat-close" onclick="toggleChat()">×</button>
-            </div>
-            <div class="chat-messages">
-                <div class="chat-message bot">
-                    <p>Halo! Ada yang bisa kami bantu?</p>
-                </div>
-            </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Ketik pesan Anda..." id="chatMessage">
-                <button onclick="sendChatMessage()">Kirim</button>
-            </div>
         </div>
     </div>
 
